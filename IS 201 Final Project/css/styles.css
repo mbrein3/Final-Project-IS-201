@@ -1,0 +1,193 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #f4f6f8;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #333;
+}
+
+.header {
+  background-color: #003366;
+  color: white;
+  padding: 20px;
+}
+
+.content {
+  background-color: white;
+  margin: 20px;
+  padding: 20px;
+}
+
+.sidebar {
+  background-color: #e6e6e6;
+  margin: 20px;
+  padding: 15px;
+}
+
+/* ===== CUSTOM INDEX PAGE STYLES ===== */
+
+.custom-header {
+  background-color: #003366;
+  color: white;
+}
+
+a:link,
+a:visited {
+  color: #1f6fb2;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Antarctica</title>
+
+  <!-- External stylesheet -->
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+
+<header id="top">
+  <h1>❄️ Antarctica ❄️</h1>
+  <p>The most extreme and mysterious continent on Earth</p>
+
+  <nav>
+    <a href="index.html">Resume</a>
+    <a href="game.html">Antarctica Game</a>
+  </nav>
+</header>
+
+<div class="container">
+
+  <div class="card">
+    <h2>About Antarctica</h2>
+    <p>
+      Antarctica is the coldest, driest, and windiest continent on Earth.
+      It contains nearly 70% of the planet’s fresh water locked in ice and
+      plays a major role in regulating global climate.
+    </p>
+  </div>
+
+  <div class="card">
+    <h2>Key Facts</h2>
+    <ol>
+      <li>Geography
+        <ul>
+          <li>Located at the South Pole</li>
+          <li>Covered by ice year-round</li>
+          <li>Holds 70% of Earth’s fresh water</li>
+        </ul>
+      </li>
+      <li>Wildlife
+        <ul>
+          <li>Emperor Penguins</li>
+          <li>Weddell Seals</li>
+          <li>Antarctic Krill</li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+
+  <div class="card">
+    <h2>What Antarctica Looks Like</h2>
+    <img src="images/antarctica.jpg" alt="Antarctica landscape">
+  </div>
+
+  <div class="card" id="antarctica-video">
+    <h2>See Antarctica Like Never Before</h2>
+    <div class="video-container">
+      <iframe
+        src="https://www.youtube.com/embed/Q_mCHs79B6c"
+        height="315"
+        allowfullscreen>
+      </iframe>
+    </div>
+  </div>
+
+  <div class="card" id="tableau">
+    <h2>Territorial Claims in Antarctica</h2>
+    <div class="video-container">
+      <iframe
+        src="https://public.tableau.com/views/territorialclaimsinantarctica/themap?:showVizHome=no"
+        height="500">
+      </iframe>
+    </div>
+
+    <p><a href="#top">↑ Back to Top</a></p>
+  </div>
+
+</div>
+
+</body>
+</html>
+
+/* 1. Body styles */
+body {
+  background: linear-gradient(to bottom, #cfe6f7, #eef6fc);
+  font-family: "Segoe UI", sans-serif; /* font family requirement */
+  color: #0b3c5d; /* font color requirement */
+  margin: 0;
+}
+
+/* 2. Header styles */
+header {
+  background-color: #0b3c5d;
+  color: white;
+  padding: 40px;
+  text-align: center;
+}
+
+header nav a {
+  color: #dbefff;
+  margin: 0 12px;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+header nav a:hover {
+  text-decoration: underline;
+}
+
+/* 3. Container for content */
+.container {
+  max-width: 1000px;
+  margin: auto;
+  padding: 40px;
+}
+
+/* 4. Card divs for content */
+.card {
+  background: white;
+  padding: 30px;
+  margin-bottom: 30px;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+}
+
+/* Image inside card */
+img {
+  max-width: 100%;
+  border-radius: 10px;
+  margin-top: 15px;
+}
+
+/* Video container for YouTube & Tableau iframes */
+.video-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+iframe {
+  width: 100%;
+  max-width: 800px;
+  border-radius: 10px;
+  border: none;
+}
+
+/* Links */
+a {
+  color: #0b3c5d;
+  font-weight: 500;
+}

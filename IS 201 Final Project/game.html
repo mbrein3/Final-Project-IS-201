@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Antarctica Survival Game</title>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #e6f2ff;
+      text-align: center;
+      padding: 40px;
+    }
+
+    .game-box {
+      background: white;
+      padding: 30px;
+      max-width: 500px;
+      margin: auto;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    button {
+      padding: 8px 16px;
+      margin: 10px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+
+<body>
+
+<div class="game-box">
+  <h1>❄️ Antarctica Survival Game ❄️</h1>
+  <p>
+    Guess the average temperature (°F) for an Antarctic day.
+    Temperatures range from -60°F to 10°F.
+  </p>
+
+  <input type="number" id="guess" placeholder="Enter temperature">
+  <br>
+  <button onclick="checkGuess()">Submit Guess</button>
+  <button onclick="resetGame()">New Day</button>
+
+  <p id="message"></p>
+
+  <p>
+    <a href="antarctica.html">← Back to Antarctica</a> |
+    <a href="index.html">Resume</a>
+  </p>
+</div>
+
+<script>
+  let temperature = Math.floor(Math.random() * 71) - 60;
+
+  function checkGuess() {
+    const guess = document.getElementById("guess").value;
+    const message = document.getElementById("message");
+
+    if (guess == temperature) {
+      message.textContent = "Correct! You survived the Antarctic cold ❄️";
+    } else if (guess > temperature) {
+      message.textContent = "Too warm! Antarctica is colder ❄️";
+    } else {
+      message.textContent = "Too cold! Try warmer 🧊";
+    }
+  }
+
+  function resetGame() {
+    temperature = Math.floor(Math.random() * 71) - 60;
+    document.getElementById("guess").value = "";
+    document.getElementById("message").textContent = "";
+  }
+</script>
+
+</body>
+</html>
